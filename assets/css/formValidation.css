@@ -1,0 +1,145 @@
+/* Form validation styles */
+.error-message {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+/* Default input styles */
+input {
+    border: 1px solid black;
+    transition: border-color 0.3s ease;
+}
+
+/* Invalid input after interaction */
+input.interacted-invalid {
+    border-color: red;
+}
+
+/* Valid input after interaction */
+input.interacted-valid {
+    border-color: green;
+}
+
+/* Button styles */
+button[type="submit"] {
+    position: relative;
+    transition: opacity 0.3s ease;
+}
+
+button[type="submit"].valid {
+    background-color: #4CAF50;
+}
+
+/* Airplane animation */
+.airplane {
+    position: fixed;
+    font-size: 2rem;
+    z-index: 1000;
+    transition: left 2s ease-in-out, transform 2s ease-in-out;
+}
+
+@keyframes fly {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+}
+
+/* Rocket Ship Styles */
+.rocket-ship {
+    position: fixed;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
+    transition: left 2s ease-in-out, top 2s cubic-bezier(0.25, 0.1, 0.25, 1), transform 2s ease-in-out;
+    width: 40px;
+    height: 80px;
+}
+
+/* Rocket Body */
+.rocket-body {
+    position: absolute;
+    width: 20px;
+    height: 50px;
+    background: #f44336;
+    border-radius: 10px;
+    left: 10px;
+    top: 20px;
+}
+
+/* Rocket Nose */
+.rocket-nose {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #f44336;
+    top: 0;
+    left: 10px;
+}
+
+/* Rocket Fins */
+.rocket-fin-left {
+    position: absolute;
+    width: 10px;
+    height: 15px;
+    background: #f44336;
+    bottom: 0;
+    left: 0;
+    transform: skew(20deg, 0);
+}
+
+.rocket-fin-right {
+    position: absolute;
+    width: 10px;
+    height: 15px;
+    background: #f44336;
+    bottom: 0;
+    right: 0;
+    transform: skew(-20deg, 0);
+}
+
+/* Rocket Window */
+.rocket-window {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ffffff;
+    border-radius: 50%;
+    top: 30px;
+    left: 15px;
+}
+
+/* Rocket Flames */
+.rocket-flames {
+    position: absolute;
+    bottom: -20px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.flame {
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    height: 30px;
+    background: linear-gradient(to bottom, #ffeb3b, #ff9800, transparent);
+    border-radius: 10px 10px 20px 20px;
+    animation: flicker 0.2s infinite alternate;
+}
+
+@keyframes flicker {
+    0% {
+        height: 20px;
+        opacity: 0.8;
+    }
+    100% {
+        height: 30px;
+        opacity: 1;
+    }
+}

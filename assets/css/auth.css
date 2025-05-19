@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+
+}
+@media (max-width: 480px) {
+    .wrapper {
+        width: 90%;
+        padding: 20px;
+    }
+    .logo {
+        width: 100px;
+    }
+}
+
+body {
+    display: flex ;
+    justify-content: center;
+    align-items:center;
+    min-height: 100vh;
+    background: url('../photos/paarse_edelsteen.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 120px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.input-box input, .wrapper .btn {
+    transition: all 0.3s ease;
+}
+
+.wrapper {
+width: 420px;
+background:transparent;
+border: 2px solid rgba(255, 255, 255, .2);
+backdrop-filter: blur(20px);
+box-shadow:  0 0 10px rgba(0, 0, 0, .2);
+color: #fff;
+border-radius: 40px;
+padding: 30px 40px;
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper h2 {
+    font-size: 26px;
+    text-align: center;
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    
+    
+}
+
+.input-box input {
+width: 100%;
+height: 100%;
+background: transparent;
+border: none;
+outline: none;
+border: 2px solid rgba(255,255,255, .2);
+border-radius: 40px;
+font-size: 16px;
+color: #fff;
+padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color:white;
+}
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+
+
+.wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 3px;    
+}
+
+.remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.wrapper .btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.wrapper .linkstyle-login-back {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.linkstyle-login-back  a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.linkstyle-login-back  a:hover {
+    text-decoration: underline;
+}
+
+.wrapper .btn:hover:not(:disabled) {
+    background: #e6e6e6;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.error-message {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
